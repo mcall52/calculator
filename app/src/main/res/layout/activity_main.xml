@@ -5,7 +5,7 @@
     android:id="@+id/grid_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.michael.basiccalculator.MainActivity">
+    tools:context="com.example.michael.calculator.MainActivity">
 
     <GridLayout
         android:layout_width="0dp"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="7" />
+            android:text="@string/seven" />
 
         <Button
             android:id="@+id/eight"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="8" />
+            android:text="@string/eight" />
 
         <Button
             android:id="@+id/nine"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="9" />
+            android:text="@string/nine" />
 
         <Button
             android:id="@+id/divide"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="/" />
+            android:text="@string/divide" />
 
         <Button
             android:id="@+id/four"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="4" />
+            android:text="@string/four" />
 
         <Button
             android:id="@+id/five"
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="5" />
+            android:text="@string/five" />
 
         <Button
             android:id="@+id/six"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="6" />
+            android:text="@string/six" />
 
         <Button
             android:id="@+id/multiply"
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="X" />
+            android:text="@string/multiply" />
 
         <Button
             android:id="@+id/one"
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="1" />
+            android:text="@string/one" />
 
         <Button
             android:id="@+id/two"
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="2" />
+            android:text="@string/two" />
 
         <Button
             android:id="@+id/three"
@@ -118,15 +118,15 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="3" />
+            android:text="@string/three" />
 
         <Button
-            android:id="@+id/subtract"
+            android:id="@+id/minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="-" />
+            android:text="@string/minus" />
 
         <Button
             android:id="@+id/zero"
@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="0" />
+            android:text="@string/zero" />
 
         <Button
             android:id="@+id/decimal"
@@ -142,7 +142,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="." />
+            android:text="@string/dot" />
 
         <Button
             android:id="@+id/delete"
@@ -150,7 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="Del" />
+            android:text="@string/backspace" />
 
         <Button
             android:id="@+id/plus"
@@ -158,7 +158,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="+" />
+            android:text="@string/plus" />
 
         <Button
             android:id="@+id/equals"
@@ -166,7 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:text="=" />
+            android:text="@string/equals" />
 
 
     </GridLayout>
