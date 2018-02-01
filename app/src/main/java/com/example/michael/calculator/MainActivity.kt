@@ -1,13 +1,10 @@
 package com.example.michael.calculator
 
-import android.app.Activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import com.example.michael.calculator.R
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,52 +16,68 @@ class MainActivity : AppCompatActivity() {
 
         val addCharToEquation = View.OnClickListener { view ->
             if(view is Button) {
-                if (inputText.text.equals("0")) {
-                    inputText.setText(view.text)
+                if (inputText.text == "0") {
+                    inputText.text = view.text
                 } else {
                     inputText.append(view.text)
                 }
             }
         }
 
-        val butt_9 = findViewById<Button>(R.id.nine)
-        butt_9.setOnClickListener(addCharToEquation)
-        val butt_8 = findViewById<Button>(R.id.eight)
-        butt_8.setOnClickListener(addCharToEquation)
-        val butt_7 = findViewById<Button>(R.id.seven)
-        butt_7.setOnClickListener(addCharToEquation)
-        val butt_6 = findViewById<Button>(R.id.six)
-        butt_6.setOnClickListener(addCharToEquation)
-        val butt_5 = findViewById<Button>(R.id.five)
-        butt_5.setOnClickListener(addCharToEquation)
-        val butt_4 = findViewById<Button>(R.id.four)
-        butt_4.setOnClickListener(addCharToEquation)
-        val butt_3 = findViewById<Button>(R.id.three)
-        butt_3.setOnClickListener(addCharToEquation)
-        val butt_2 = findViewById<Button>(R.id.two)
-        butt_2.setOnClickListener(addCharToEquation)
-        val butt_1 = findViewById<Button>(R.id.one)
-        butt_1.setOnClickListener(addCharToEquation)
-        val butt_0 = findViewById<Button>(R.id.zero)
-        butt_0.setOnClickListener(addCharToEquation)
-        val butt_dot = findViewById<Button>(R.id.decimal)
-        butt_dot.setOnClickListener(addCharToEquation)
+        val addOperationToEquation = View.OnClickListener { view ->
+            if (view is Button) {
+                if (inputText.text != "0") {
+                    inputText.append(view.text)
+                    //split into 2 parts
 
-        val butt_plus = findViewById<Button>(R.id.plus)
-        val butt_minus = findViewById<Button>(R.id.minus)
-        val butt_times = findViewById<Button>(R.id.multiply)
-        val butt_divide = findViewById<Button>(R.id.divide)
-        val butt_equals = findViewById<Button>(R.id.equals)
-        val butt_backspace = findViewById<Button>(R.id.delete)
-        butt_backspace.setOnClickListener{ button ->
-            if(inputText.text.equals("0")){
-                //nothing
-            } else {
-                inputText.setText(inputText.text.dropLast(1) as CharSequence)
+                }
             }
         }
 
+        val evaluate = null
 
+        val butt9 = findViewById<Button>(R.id.nine)
+        butt9.setOnClickListener(addCharToEquation)
+        val butt8 = findViewById<Button>(R.id.eight)
+        butt8.setOnClickListener(addCharToEquation)
+        val butt7 = findViewById<Button>(R.id.seven)
+        butt7.setOnClickListener(addCharToEquation)
+        val butt6 = findViewById<Button>(R.id.six)
+        butt6.setOnClickListener(addCharToEquation)
+        val butt5 = findViewById<Button>(R.id.five)
+        butt5.setOnClickListener(addCharToEquation)
+        val butt4 = findViewById<Button>(R.id.four)
+        butt4.setOnClickListener(addCharToEquation)
+        val butt3 = findViewById<Button>(R.id.three)
+        butt3.setOnClickListener(addCharToEquation)
+        val butt2 = findViewById<Button>(R.id.two)
+        butt2.setOnClickListener(addCharToEquation)
+        val butt1 = findViewById<Button>(R.id.one)
+        butt1.setOnClickListener(addCharToEquation)
+        val butt0 = findViewById<Button>(R.id.zero)
+        butt0.setOnClickListener(addCharToEquation)
+        val buttDot = findViewById<Button>(R.id.decimal)
+        buttDot.setOnClickListener(addCharToEquation)
+
+        val buttPlus = findViewById<Button>(R.id.plus)
+        buttPlus.setOnClickListener(addOperationToEquation)
+        val buttMinus = findViewById<Button>(R.id.minus)
+        buttMinus.setOnClickListener(addOperationToEquation)
+        val buttTimes = findViewById<Button>(R.id.multiply)
+        buttTimes.setOnClickListener(addOperationToEquation)
+        val buttDivide = findViewById<Button>(R.id.divide)
+        buttDivide.setOnClickListener(addOperationToEquation)
+        val buttEquals = findViewById<Button>(R.id.equals)
+        val buttBackspace = findViewById<Button>(R.id.delete)
+        buttBackspace.setOnClickListener {
+            if(inputText.text != "") {
+                inputText.text = inputText.text.dropLast(1)
+            }
+        }
+        buttBackspace.setOnLongClickListener {
+            inputText.text = ""
+            true
+        }
     }
 
 //    fun appendToEquation
