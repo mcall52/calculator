@@ -23,6 +23,14 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
+            android:id="@+id/sum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill_horizontal"
+            android:textSize="50dp"/>
+
+        <TextView
             android:id="@+id/equation"
             android:layout_width="362dp"
             android:layout_height="69dp"

@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         buttBackspace.setOnLongClickListener {
-            inputText.text = ""
+             inputText.text = ""
             true
         }
     }
